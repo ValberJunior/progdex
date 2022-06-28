@@ -4,6 +4,8 @@
 - Usar o axios
 - Mockar a Api
 - import absoluto ✅
+- Abstract SCSS ✅
+- theme com font oficial 
 
 - Quais tecnologias vou usar?
 Estilos: sass;
@@ -31,13 +33,13 @@ Light Mode e Dark Mode
 
 ------
 Libs usadas 
-- Sass
-- css modules
-- Reset css : normalize.css
-- pacotes classname
-- Icons: npm i react-icons 
-- react-router-dom
-- axios
-- json server
-- recoil
+- Sass ✅
+- css modules ✅
+- Reset css : normalize.css ✅
+- pacotes classname ✅
+- Icons: npm i react-icons ✅
+- react-router-dom ✅
+- axios ✅
+- json server ✅
+- recoil ✅
 

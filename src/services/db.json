@@ -1,6 +1,7 @@
 [
   {
     "Language": 1,
+    "picture": "assets/code.png",
     "Intended use": "1C:Enterprise",
     "Imperative": "Application, RAD, �business, general, web, mobile",
     "Object-oriented": "Yes",
