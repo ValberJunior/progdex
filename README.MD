@@ -28,3 +28,16 @@ Pasta com intefaces ou types e Enum
 React Recoil 
 
 Light Mode e Dark Mode 
+
+------
+Libs usadas 
+- Sass
+- css modules
+- Reset css : normalize.css
+- pacotes classname
+- Icons: npm i react-icons 
+- react-router-dom
+- axios
+- json server
+- recoil
+
