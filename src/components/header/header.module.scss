@@ -1,20 +1,21 @@
 @import "../../abstract/functions", "../../abstract/responsive", "../../abstract/variables";
 
-.container{
-    @include screenSize(100vw,15vh);
+.container {
+    @include screenSize(100vw, 15vh);
 
-    &__wrapper{
-        @include wrapperCenter(90vw,row);
+    &__wrapper {
+        @include wrapperCenter(90vw, row);
         height: 80%;
         @include displayFlex(space-between, center, row);
         padding: 90px 10px;
 
-        &-title{
-            @include title(50px,start,$color1)
+        &-title {
+            @include title(50px, start, $color1);
         }
 
-        &-icon{
+        &-icon {
             font-size: 40px;
+            cursor: pointer;
         }
     }
 }
