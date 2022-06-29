@@ -19,3 +19,13 @@ body{
         @extend %invisible; 
         }
 }
+
+.light{
+    color: $dark;
+    background: $light;
+
+}
+.dark{
+    color: $light;
+    background: $dark;
+}

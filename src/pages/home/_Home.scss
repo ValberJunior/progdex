@@ -1,0 +1,6 @@
+@import "abstract/functions", "abstract/variables", "abstract/responsive";
+
+.container{
+    @include screenSize(100vw,auto);
+    @include displayFlex(center, center, column)
+}
