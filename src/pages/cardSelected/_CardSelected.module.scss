@@ -1,1 +1,64 @@
 @import "abstract/functions", "abstract/variables", "abstract/responsive";
+
+.container{
+    @include screenSize(80vw, auto);
+    margin: auto;
+    background: pink;
+    border-radius: 10px;
+
+    &__desc{
+        @include displayFlex(space-between, center, row);
+        @include screenSize(100%, 20vh);
+        padding:20px 60px;
+
+        &-titleAndTag{
+            @include displayFlex(space-between, center,column);
+
+            h3{
+                @include title(45px, start);
+                color: #FFF;
+                padding: 50px 0px 20px 0px;
+            }
+            span{
+                background: #ffffff7e;
+                border-radius: 10px;
+                color: #555555;
+                padding: 10px;
+            }
+        }
+        &-id{
+            @include subtitle(30px, center);
+            color: #555555;
+        }
+    }
+    &__details{
+        @include screenSize(100%, 100vh);
+        @include displayFlex(space-between, center, column);
+
+        &-tech{
+            width: 400px;
+            position: relative;
+            top: 30px;
+        }
+        &-table{
+            @include screenSize(90%, 80vh);
+            @include displayFlex(center,start,row);
+            background: #cdcdcd;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            padding: 20px;
+
+            table{
+                @include screenSize(60%, auto);
+                margin-top: 50px;
+                th{
+                    padding: 20px;
+                }
+                tbody{
+                    @include screenSize(100%, 30vh);
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
