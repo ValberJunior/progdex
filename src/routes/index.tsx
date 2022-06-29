@@ -1,4 +1,4 @@
-import { Home } from "pages";
+import { CardSelected, Home } from "pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function AppRouter() {
@@ -7,6 +7,7 @@ export default function AppRouter() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/*" element={<h1>Page Not Found</h1>} />
+                <Route path="/cardSelected" element={<CardSelected/>}/>
             </Routes>
         </Router>
     )
