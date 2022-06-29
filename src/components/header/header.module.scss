@@ -1,0 +1,11 @@
+@import "../../abstract/functions", "../../abstract/responsive", "../../abstract/variables";
+
+.container{
+    @include screenSize(100vw,15vh);
+
+    &__wrapper{
+        @include wrapperCenter(90vw,row);
+        height: 80%;
+        @include displayFlex(space-between, center, row);
+    }
+}

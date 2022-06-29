@@ -1,0 +1,5 @@
+@import "abstract/functions", "abstract/variables", "abstract/responsive";
+
+.container{
+    @include screenSize(100vh,auto);
+}

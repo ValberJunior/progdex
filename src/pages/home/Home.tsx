@@ -1,8 +1,12 @@
-import React from 'react'
+import { Header } from 'components'
+import style from "./home.module.scss";
 
 const Home = () => {
+
   return (
-    <div>Hello world</div>
+    <main className={style.container}>
+      <Header />
+    </main>
   )
 }
 

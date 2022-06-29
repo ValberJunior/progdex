@@ -28,7 +28,7 @@
 @mixin displayFlex($jty-cnt, $align-itm, $direction ){
     display: flex;
     justify-content: #{$jty-cnt};
-    align-items: #{$align-it};
+    align-items: #{$align-itm};
     flex-direction: #{$direction}
 }
 

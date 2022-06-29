@@ -42,4 +42,5 @@ Libs usadas
 - axios ✅
 - json server ✅
 - recoil ✅
+- msw ✅
 
