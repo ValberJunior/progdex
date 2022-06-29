@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <header className={style.container}>
       <section className={style.container__wrapper}>
-          <h1>ProgDex</h1>
-          <span>Dark )</span>
+          <h1 className={style["container__wrapper-title"]}>ProgDex</h1>
+          <FaMoon className={style["container__wrapper-icon"]}/>
       </section>
     </header>
   )

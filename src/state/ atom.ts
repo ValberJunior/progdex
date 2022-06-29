@@ -1,10 +1,7 @@
 import { atom } from "recoil";
-import { IProgrammingLanguage } from "interfaces";
-import Data from "data/data.json";
+import { themeModeEnum } from "utils/enum/theme-mode-enum";
 
-const typeData = typeof Data;
-
-export const techsList = atom<IProgrammingLanguage[]>({
+export const themeMode = atom<themeModeEnum>({
     key: "techsList",
-    default: []
+    default: themeModeEnum.lightMode
 });

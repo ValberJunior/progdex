@@ -7,5 +7,14 @@
         @include wrapperCenter(90vw,row);
         height: 80%;
         @include displayFlex(space-between, center, row);
+        padding: 90px 10px;
+
+        &-title{
+            @include title(50px,start,$color1)
+        }
+
+        &-icon{
+            font-size: 40px;
+        }
     }
 }
