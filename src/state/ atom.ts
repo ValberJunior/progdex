@@ -11,3 +11,8 @@ export const techSelected = atom<IProgrammingLanguage | "">({
     key: "techSelected",
     default: ""
 })
+
+export const pageHome = atom<boolean>({
+    key: "pageHome",
+    default: true
+})
