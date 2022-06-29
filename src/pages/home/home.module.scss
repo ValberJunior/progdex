@@ -1,5 +1,14 @@
 @import "abstract/functions", "abstract/variables", "abstract/responsive";
 
+.light{
+    color: $dark;
+    background: $light;
+
+}
+.dark{
+    color: $light;
+    background: $dark;
+}
 .container{
     @include screenSize(100vh,auto);
 }
