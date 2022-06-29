@@ -42,7 +42,7 @@
         }
         &-table{
             @include screenSize(90%, 80vh);
-            @include displayFlex(center,start,row);
+            @include displayFlex(center,flex-start,row);
             background: #cdcdcd;
             border-top-left-radius: 50px;
             border-top-right-radius: 50px;
