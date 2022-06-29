@@ -1,19 +1,20 @@
-import { Header } from 'components'
-import style from "./home.module.scss";
+import { CardList, Header } from 'components'
+import "./_home.scss";
 import classNames from 'classnames';
 import { themeModeEnum } from 'utils/enum/theme-mode-enum';
 import { useThemeMode } from 'state/hooks/useThemeMode';
 
 const Home = () => {
 
-  const theme = useThemeMode(); 
+  const theme : themeModeEnum = useThemeMode(); 
   
   return (
     <main className={classNames({
-      [style.dark]: theme === themeModeEnum.darkMode, 
-      [style.light] : theme === themeModeEnum.lightMode  
+      "dark": theme === themeModeEnum.darkMode, 
+      "light" : theme === themeModeEnum.lightMode  
       })}> 
       <Header />
+      <CardList/>
     </main>
   )
 }

@@ -1,0 +1,9 @@
+@import "../../abstract/functions", "../../abstract/responsive", "../../abstract/variables";
+
+.cards{
+    @include screenSize(80vw, auto);
+    @include displayFlex(center,center,row);
+    margin: auto;
+    padding: 80px 0px;
+    flex-wrap: wrap;
+}

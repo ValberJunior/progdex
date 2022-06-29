@@ -1,16 +1,16 @@
-import React from 'react';
-import Imagem from "assets/code.png";
+import { IProgrammingLanguage } from 'interfaces';
+import style from "./_Card.module.scss";
 
-const Card = () => {
+const Card = (props : IProgrammingLanguage | any) => {
   return (
-    <div>
-        <div className="">
-            <h3>Título</h3>
-            <p>tags</p>
-            <p>tags</p>
+    <article className={style.card}>
+        <div className={style.card__description}>
+          <h3 className={style["card__description-title"]}>{props.IntendedUse}</h3>
+          <span className={style["card__description-tag"]}>Orientado a Objeto</span>
         </div>
-        <img src={Imagem} alt="imagem de teste"/>
-    </div>
+        <img src="https://icon-library.com/images/code-icon-png/code-icon-png-5.jpg"
+          alt={props.language} className={style.card__img}/> 
+    </article>
   )
 }
 

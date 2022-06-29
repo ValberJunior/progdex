@@ -8,16 +8,16 @@ import style from "./header.module.scss";
 
 const Header = () => {
 
-  const theme = useThemeMode(); 
+  const theme: themeModeEnum = useThemeMode(); 
   const setTheme = useSetRecoilState(themeMode);
-  const [ darkMode, setDarkMode ] = useState(false);
+  const [ darkMode, setDarkMode ] = useState<boolean>(false);
 
   const selectThemeMode = ()=>{
        setTheme(theme !== themeModeEnum.darkMode ? themeModeEnum.darkMode : themeModeEnum.lightMode);
-       if(theme === themeModeEnum.darkMode) setDarkMode(true);
-       else setDarkMode(false);
+       if(theme === themeModeEnum.darkMode) return setDarkMode(true);
+       return setDarkMode(false);
   }
-
+  
   return (
     <header className={style.container}>
       <section className={style.container__wrapper}>
