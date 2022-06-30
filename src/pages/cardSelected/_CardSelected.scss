@@ -13,9 +13,11 @@
 
     @include for-phone-only{
         @include screenSize(100vw, auto);
+        border-radius: 20px 20px 0px 0px;        
     }
     @include for-phoneS-only{
         margin-top: 30px;
+        border-radius: 20px 20px 0px 20px;
         @include screenSize(100vw, auto);
     }
 
