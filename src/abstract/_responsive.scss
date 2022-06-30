@@ -5,22 +5,35 @@
 */
 
 //Phone
+
+@mixin for-phoneS-only{
+    @media(max-width: 499px){
+        @content;
+    }
+}
+
 @mixin for-phone-only{
-    @media(max-width: 767.98px){
+    @media(min-width: 500px)and(max-width: 767.98px){
         @content;
     }
 }
 
 //Tablet
 @mixin for-tablet-only{
-    @media(min-width: 768px)and(max-width:1199.98px){
+    @media(min-width: 768px)and(max-width:1299px){
         @content;
     }
 }
 
-//Desktop viewport
-@mixin for-desktop-only{
-    @media(min-width: 1200px)and(max-width: 1300px){
+//Desktop 
+@mixin for-desktopXL-only{
+    @media(min-width: 1328px)and(max-width: 1580px){
+        @content;
+    }
+}
+
+@mixin for-desktopL-only{
+    @media(min-width: 1300px)and(max-width: 1327px){
         @content;
     }
 }

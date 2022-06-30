@@ -6,4 +6,20 @@
     margin: auto;
     padding: 80px 0px;
     flex-wrap: wrap;
+    //viewport
+    @include for-desktopXL-only{
+        @include screenSize(95vw, auto);
+    }
+    @include for-desktopL-only{
+        @include screenSize(100vw, auto);
+    }
+    @include for-tablet-only{
+        @include screenSize(100vw, auto);
+    }
+    @include for-phone-only{
+        @include screenSize(100vw, auto);
+    }
+    @include for-phoneS-only{
+        @include screenSize(90vw, auto);
+    }
 }

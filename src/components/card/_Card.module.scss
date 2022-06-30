@@ -15,6 +15,18 @@
     border-radius: 40px;
     box-sizing: border-box;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    @include for-tablet-only{
+        @include displayFlex(center, center, column-reverse);
+        height: 300px;
+    }
+    @include for-phone-only{
+        width: 45%;
+        @include displayFlex(center, center, column-reverse);
+        height: 300px;
+    }
+    @include for-phoneS-only{
+        width: 100%;
+    }
 
     &:hover{
         opacity: 0.9;
@@ -28,6 +40,17 @@
         &-title{
             @include title(25px, center);
             margin-bottom: 20px;
+            @include for-tablet-only{
+                margin-bottom: 5px;
+                @include fontSize(20px);
+            }
+            @include for-phone-only{
+                margin-bottom: 5px;
+            }
+            @include for-phoneS-only{
+                @include fontSize(20px);
+                margin-bottom: 5px;
+            }
         }
         &-tag{
             background-color: $color6;
@@ -36,11 +59,21 @@
             border-radius: 50px;
             @include subtitle(10px, center);
             margin: 5px 10px;
+            @include for-phone-only{
+                padding: 5px;
+            }
+            @include for-phoneS-only{
+                padding: 5px;
+            }
         }
     }
     &__img{
         flex: 1;
         width: 120px;
         padding: 5px;
+
+        @include for-phoneS-only{
+            width: 90px;
+        }
     }
 }
