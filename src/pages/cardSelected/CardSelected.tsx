@@ -47,34 +47,39 @@ const CardSelected = () => {
                   <th>About</th>
                 </tr>
               </thead>
-              <tbody>
+            <tbody>
               <tr>
-                  <td colSpan={2} className="nameTech">
-                    {tech?.Imperative}
+                <td colSpan={2} className="nameTech">
+                  {tech?.Imperative}
+                </td>
+              </tr>
+              {!ObjectOriented && !Functional && !Procedural && !Generic ? null :
+                (<tr>
+                  <td colSpan={2} className="tagsTech">
+                    {ObjectOriented && <span>Object Oriented</span>}
+                    {Functional && <span>Functional</span>}
+                    {Procedural && <span>Procedural</span>}
+                    {Generic && <span>Generic</span>}
+                  </td>
+                </tr>)
+              }
+              {!Reflective && !EventDriven && !OtherParadigms ? null :
+                (<tr>
+                  <td colSpan={2} className="tagsTech">
+                    {Reflective && <span>Reflective</span>}
+                    {EventDriven && <span>EventDriven</span>}
+                    {OtherParadigms && <span>OtherParadigms</span>}
+                  </td>
+                </tr>)
+              }
+              {tech?.Standardized !== "" &&
+                <tr>
+                  <td colSpan={2} className="tagsTech">
+                    <span>{tech?.Standardized}</span>
                   </td>
                 </tr>
-                <tr>
-                <td colSpan={2} className="tagsTech">
-                  {ObjectOriented && <span>Object Oriented</span>}
-                  {Functional && <span>Functional</span>}
-                  {Procedural && <span>Procedural</span>}
-                  {Generic && <span>Generic</span>}
-                </td>
-                </tr>
-                <tr>
-                <td colSpan={2} className="tagsTech">
-                  {Reflective && <span>Reflective</span>}
-                  {EventDriven && <span>EventDriven</span>}
-                  {OtherParadigms && <span>OtherParadigms</span>}
-                </td>
-                </tr>
-                <tr>
-                <td colSpan={2} className="tagsTech">
-                  {tech?.Standardized !== "" && <span>{tech?.Standardized}</span>}
-                </td>
-                </tr>
-                
-              </tbody>
+              }
+            </tbody>
             </table>
           </div>
         </article>
