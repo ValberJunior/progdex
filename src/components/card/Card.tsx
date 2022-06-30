@@ -1,17 +1,20 @@
 import { IProgrammingLanguage } from 'interfaces';
 import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
-import { pageHome } from 'state/ atom';
+import { pageHome, techSelected } from 'state/ atom';
 import style from "./_Card.module.scss";
 
 const Card = (props : IProgrammingLanguage | any) => {
   const navigate = useNavigate();
   const setHome = useSetRecoilState(pageHome);
+  const setTech = useSetRecoilState(techSelected);
 
   const openCard = () => {
     navigate("/cardSelected");
     setHome(false);
+    setTech(props);
   }
+
   return (
     <article
       className={style.card}
@@ -20,7 +23,7 @@ const Card = (props : IProgrammingLanguage | any) => {
           <h3 className={style["card__description-title"]}>{props.IntendedUse}</h3>
           <span className={style["card__description-tag"]}>Orientado a Objeto</span>
         </div>
-        <img src="https://icon-library.com/images/code-icon-png/code-icon-png-5.jpg"
+        <img src={props.Picture}
           alt={props.language} className={style.card__img}/> 
     </article>
   )

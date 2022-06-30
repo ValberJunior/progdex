@@ -1,7 +1,8 @@
 export interface IProgrammingLanguage {
-    language: number;
+    Language: number;
     IntendedUse: string;
     Imperative: string | null;
+    Picture: string,
     ObjectOriented: string | null;
     Funcional: string | null;
     Procedural: string | null;

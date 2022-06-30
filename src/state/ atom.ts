@@ -7,9 +7,9 @@ export const themeMode = atom<themeModeEnum>({
     default: themeModeEnum.lightMode
 });
 
-export const techSelected = atom<IProgrammingLanguage | "">({
+export const techSelected = atom<IProgrammingLanguage | null>({
     key: "techSelected",
-    default: ""
+    default: null
 })
 
 export const pageHome = atom<boolean>({
