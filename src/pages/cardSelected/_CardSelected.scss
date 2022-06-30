@@ -8,6 +8,7 @@
 .containerCard{
     @include screenSize(80vw, auto);
     margin: auto;
+    margin-top: 20px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
@@ -17,7 +18,7 @@
     }
     @include for-phoneS-only{
         margin-top: 30px;
-        border-radius: 20px 20px 0px 20px;
+        border-radius: 20px 20px 0px 0px;
         @include screenSize(100vw, auto);
     }
 
@@ -28,16 +29,22 @@
 
         &-titleAndTag{
             @include displayFlex(space-between, center,column);
+            @include for-phone-only{
+                @include displayFlex(center, flex-start,column);
+            }
+            @include for-phoneS-only{
+                @include displayFlex(center, flex-start,column);
+            }
 
             h3{
                 @include title(45px, start);
                 color: $light;
                 padding: 50px 0px 20px 0px;
                 @include for-phone-only{
-                    @include title(35px, start);
+                    @include title(30px, start);
                 }
                 @include for-phoneS-only{
-                    @include title(35px, start);
+                    @include title(30px, start);
                 }
             }
             span{
@@ -61,13 +68,14 @@
         }
     }
     &__details{
-        @include screenSize(100%, 100vh);
+        @include screenSize(100%, 100%);
         @include displayFlex(space-between, center, column);
 
         &-tech {
-                width: 400px;
+                width: 375px;
+                max-height: 400px;
                 position: relative;
-                top: 30px;
+                top: 35px;
                 //animation pulse
                 display: inline-block;
                 vertical-align: middle;
