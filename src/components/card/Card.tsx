@@ -18,10 +18,12 @@ const Card = (props : IProgrammingLanguage | any) => {
   return (
     <article
       className={style.card}
-      onClick={openCard}>
+      onClick={openCard}
+      >
         <div className={style.card__description}>
           <h3 className={style["card__description-title"]}>{props.IntendedUse}</h3>
-          <span className={style["card__description-tag"]}>Orientado a Objeto</span>
+          {props.Functional === "Yes" && <span className={style["card__description-tag"]}>Functional</span>}
+          {props.ObjectOriented === "Yes" &&<span className={style["card__description-tag"]}>Object Oriented</span>}
         </div>
         <img src={props.Picture}
           alt={props.language} className={style.card__img}/> 

@@ -30,6 +30,7 @@
             padding: 10px;
             border-radius: 50px;
             @include subtitle(10px, center);
+            margin: 10px;
         }
     }
     &__img{
