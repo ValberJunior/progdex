@@ -1,9 +1,13 @@
 @import "abstract/functions", "abstract/variables", "abstract/responsive";
 
-.container{
+.bgOO{ background-color: $color2;}
+.bgfC{ background-color: $color1;}
+.bgOF{ background-color: $color3};
+.bgNo{ background-color: $color4;}
+
+.containerCard{
     @include screenSize(80vw, auto);
     margin: auto;
-    background: pink;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 

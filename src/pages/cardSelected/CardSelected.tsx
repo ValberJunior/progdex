@@ -1,32 +1,41 @@
+import classNames from "classnames";
 import { IProgrammingLanguage } from "interfaces";
 import { useTechSelected } from "state/hooks/useTechSelected";
-import style from "./_CardSelected.module.scss";
+import "./_CardSelected.scss";
 
 const CardSelected = () => {
 
   const tech:IProgrammingLanguage | null = useTechSelected();
+  const ObjectOrientedAndFuncional :boolean = (tech?.ObjectOriented === "Yes" && tech?.Functional ===  "Yes")? true: false;
+  const ObjectOriented  :boolean = tech?.ObjectOriented === "Yes"? true: false;
+  const Functional :boolean =  tech?.Functional === "Yes" ? true : false;
 
   return (
-    <section className={style.container}>
+    <section className={classNames({
+      "containerCard" : true,
+      "bgOF" : ObjectOrientedAndFuncional,
+      "bgfC" : Functional,
+      "bgOO" : ObjectOriented,
+      "bgNo" : !Functional && !ObjectOriented})}>
 
-        <article className={style.container__desc}>
-          <div className={style["container__desc-titleAndTag"]}>
+        <article className="containerCard__desc">
+          <div className="containerCard__desc-titleAndTag">
             <h3>{tech?.IntendedUse}</h3>
             <span>
               {tech?.Imperative}
             </span>
           </div>
           <div>
-            <span className={style["container__desc-id"]}>#{tech?.Language}</span>
+            <span className="containerCard__desc-id">#{tech?.Language}</span>
           </div>
         </article>
 
-        <article className={style.container__details}>
+        <article className="containerCard__details">
           <img src={tech?.Picture}
-             alt="imaggggg"
-             className={style["container__details-tech"]}
+             alt={tech?.IntendedUse}
+             className="containerCard__details-tech"
              />
-          <div className={style["container__details-table"]}>
+          <div className="containerCard__details-table">
             <table>
               <thead>
                 <tr>

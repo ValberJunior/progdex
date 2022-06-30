@@ -1,7 +1,11 @@
 @import "../../abstract/functions", "../../abstract/responsive", "../../abstract/variables";
 
+.bgOO{ background-color: $color2;}
+.bgfC{ background-color: $color1;}
+.bgOF{ background-color: $color3};
+.bgNo{ background-color: $color4;}
+
 .card{
-    background: gray;
     margin: 10px 10px 10px 10px;
     padding: 30px;
     @include displayFlex(space-between, center, row);
@@ -26,7 +30,8 @@
             margin-bottom: 20px;
         }
         &-tag{
-            background-color: #ffffff7e;
+            background-color: $color6;
+            color: $color5;
             padding: 10px;
             border-radius: 50px;
             @include subtitle(10px, center);

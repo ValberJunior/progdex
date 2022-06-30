@@ -4,7 +4,7 @@ export interface IProgrammingLanguage {
     Imperative: string | null;
     Picture: string,
     ObjectOriented: string | null;
-    Funcional: string | null;
+    Functional: string | null;
     Procedural: string | null;
     Generic: string | null;
     Reflective: string | null;

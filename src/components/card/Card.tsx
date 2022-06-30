@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { IProgrammingLanguage } from 'interfaces';
 import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
@@ -15,15 +16,25 @@ const Card = (props : IProgrammingLanguage | any) => {
     setTech(props);
   }
 
+  const ObjectOrientedAndFuncional :boolean = (props.ObjectOriented === "Yes" && props.Functional ===  "Yes")? true: false;
+  const ObjectOriented  :boolean = props.ObjectOriented === "Yes"? true: false;
+  const Functional :boolean =  props.Functional === "Yes" ? true : false;
+  
   return (
     <article
-      className={style.card}
+      className= { classNames({
+        [style.card] : true,
+        [style.bgOF] : ObjectOrientedAndFuncional,
+        [style.bgfC] : Functional,
+        [style.bgOO] : ObjectOriented,
+        [style.bgNo] : !Functional && !ObjectOriented
+      })}
       onClick={openCard}
       >
         <div className={style.card__description}>
           <h3 className={style["card__description-title"]}>{props.IntendedUse}</h3>
-          {props.Functional === "Yes" && <span className={style["card__description-tag"]}>Functional</span>}
-          {props.ObjectOriented === "Yes" && <span className={style["card__description-tag"]}>Object Oriented</span>}
+          { Functional && <span className={style["card__description-tag"]}>Functional</span> }
+          { ObjectOriented && <span className={style["card__description-tag"]}>Object Oriented</span> }
         </div>
         <img src={props.Picture}
           alt={props.language} className={style.card__img}/> 
