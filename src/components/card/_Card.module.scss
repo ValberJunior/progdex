@@ -1,9 +1,9 @@
 @import "../../abstract/functions", "../../abstract/responsive", "../../abstract/variables";
 
-.bgOO{ background-color: $color2;}
-.bgfC{ background-color: $color1;}
-.bgOF{ background-color: $color3};
-.bgNo{ background-color: $color4;}
+.bgOO{ background: linear-gradient($color2, $color2, $color8)}
+.bgFC{ background: linear-gradient($color1, $color1, $color9)}
+.bgOF{ background: linear-gradient($color3, $color3, $color10)}
+.bgNo{ background: linear-gradient($color4, $color4, $color11)}
 
 .card{
     margin: 10px 10px 10px 10px;

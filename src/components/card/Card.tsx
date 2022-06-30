@@ -25,7 +25,7 @@ const Card = (props : IProgrammingLanguage | any) => {
       className= { classNames({
         [style.card] : true,
         [style.bgOF] : ObjectOrientedAndFuncional,
-        [style.bgfC] : Functional,
+        [style.bgFC] : Functional,
         [style.bgOO] : ObjectOriented,
         [style.bgNo] : !Functional && !ObjectOriented
       })}

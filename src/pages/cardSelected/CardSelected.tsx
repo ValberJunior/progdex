@@ -9,6 +9,11 @@ const CardSelected = () => {
   const ObjectOrientedAndFuncional :boolean = (tech?.ObjectOriented === "Yes" && tech?.Functional ===  "Yes")? true: false;
   const ObjectOriented  :boolean = tech?.ObjectOriented === "Yes"? true: false;
   const Functional :boolean =  tech?.Functional === "Yes" ? true : false;
+  const Procedural :boolean =  tech?.Procedural === "Yes" ? true : false;
+  const Generic :boolean =  tech?.Generic === "Yes" ? true : false;
+  const Reflective :boolean =  tech?.Reflective === "Yes" ? true : false;
+  const EventDriven :boolean =  tech?.EventDriven === "Yes" ? true : false;
+  const OtherParadigms :boolean =  tech?.OtherParadigms === "Yes" ? true : false;
 
   return (
     <section className={classNames({
@@ -39,18 +44,36 @@ const CardSelected = () => {
             <table>
               <thead>
                 <tr>
-                  <th>{tech?.IntendedUse}</th>
-                  <th>Orientada a Objeto?</th>
-                  <th>É funcional?</th>
-                  <th>É procedural?</th>
+                  <th>About</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td colSpan={4}>
-                    Comentaŕios
+              <tr>
+                  <td colSpan={2} className="nameTech">
+                    {tech?.Imperative}
                   </td>
                 </tr>
+                <tr>
+                <td colSpan={2} className="tagsTech">
+                  {ObjectOriented && <span>Object Oriented</span>}
+                  {Functional && <span>Functional</span>}
+                  {Procedural && <span>Procedural</span>}
+                  {Generic && <span>Generic</span>}
+                </td>
+                </tr>
+                <tr>
+                <td colSpan={2} className="tagsTech">
+                  {Reflective && <span>Reflective</span>}
+                  {EventDriven && <span>EventDriven</span>}
+                  {OtherParadigms && <span>OtherParadigms</span>}
+                </td>
+                </tr>
+                <tr>
+                <td colSpan={2} className="tagsTech">
+                  {tech?.Standardized !== "" && <span>{tech?.Standardized}</span>}
+                </td>
+                </tr>
+                
               </tbody>
             </table>
           </div>
