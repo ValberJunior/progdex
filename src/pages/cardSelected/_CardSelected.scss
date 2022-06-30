@@ -10,7 +10,14 @@
     margin: auto;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    overflow: scroll;
+
+    @include for-phone-only{
+        @include screenSize(100vw, auto);
+    }
+    @include for-phoneS-only{
+        margin-top: 30px;
+        @include screenSize(100vw, auto);
+    }
 
     &__desc{
         @include displayFlex(space-between, center, row);
@@ -24,12 +31,26 @@
                 @include title(45px, start);
                 color: $light;
                 padding: 50px 0px 20px 0px;
+                @include for-phone-only{
+                    @include title(35px, start);
+                }
+                @include for-phoneS-only{
+                    @include title(35px, start);
+                }
             }
             span{
                 background-color: $color6;
                 border-radius: 10px;
                 color: $color5;
                 padding: 10px;
+                @include for-phone-only{
+                    padding: 5px;                    
+                    @include fontSize(16px);
+                }
+                @include for-phoneS-only{
+                    padding: 10px;                    
+                    @include fontSize(14px);
+                }
             }
         }
         &-id{
@@ -75,6 +96,20 @@
                         transform: scale(1.1);
                     }
                 }
+                @include for-desktopL-only{
+                    width: 350px;
+                }
+                @include for-tablet-only{
+                    width: 350px;
+                 }
+                @include for-phone-only{
+                    top: 100px;
+                    width: 250px;
+                }
+                @include for-phoneS-only{
+                    top: 75px;
+                    width: 280px;
+                }
         
              }
         &-table{
@@ -82,13 +117,27 @@
             @include displayFlex(center,flex-start,row);
             background-color: $color7;
             color: $color5;
-            border-top-left-radius: 50px;
-            border-top-right-radius: 50px;
+            border-radius: 30px;
             padding: 20px;
+            margin-bottom: 5px;
 
             table{
-                @include screenSize(60%, auto);
+                @include screenSize(70%, auto);
                 margin: 50px 0px 10px 0px;
+
+                @include for-desktopL-only{
+                    @include screenSize(80%, auto);
+                }
+                @include for-tablet-only{
+                    @include screenSize(95%, auto);
+                }
+                @include for-phone-only{
+                    @include screenSize(100%, auto);
+                }
+                @include for-phoneS-only{
+                    @include screenSize(100%, auto);
+                }
+
                 th{
                     padding: 30px;
                     text-align: start;
@@ -107,15 +156,30 @@
                     text-align: start;
                     tr{
                         height: 60px;
+                        @include for-phone-only{
+                            height: 40px;
+                        }  
+                        @include for-phoneS-only{
+                            height: 35px;
+                        }                         
                     }
                     .nameTech{
                         @include fontSize(35px);
                         color: $dark;
                         padding: 20px 0px;
+                        @include for-tablet-only{
+                           @include fontSize(25px);
+                        }
+                        @include for-phone-only{
+                            @include fontSize(20px);
+                        }
+                        @include for-phoneS-only{
+                            @include fontSize(20px);
+                        }
                     }
                     .detailsTech{
                         @include fontSize(22px);
-                        color: green
+                        color: $dark;
                     }
                     .tagsTech{
                         span{
@@ -127,6 +191,19 @@
                             border-radius: 10px;
                             flex-wrap: wrap;
                             cursor: pointer;
+                            @include for-tablet-only{
+                                @include fontSize(11px);
+                             }
+                            @include for-phone-only{
+                                @include fontSize(7px);
+                                padding: 10px;
+                                margin: 5px;
+                            }
+                            @include for-phoneS-only{
+                                @include fontSize(8px);
+                                padding: 10px;
+                                margin: 5px;
+                            }
 
                             &:hover{
                                 background-color: $color5;
