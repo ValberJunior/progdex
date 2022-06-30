@@ -37,7 +37,7 @@
                     @include title(30px, start);
                 }
                 @include for-phoneS-only{
-                    @include title(30px, start);
+                    @include title(20px, start);
                 }
             }
             span{
@@ -58,6 +58,10 @@
         &-id{
             @include subtitle(30px, center);
             color: $color5;
+
+            @include for-phoneS-only{
+                @include subtitle(20px, flex-end);
+            }
         }
     }
     &__details{
