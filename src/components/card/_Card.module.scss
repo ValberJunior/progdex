@@ -70,6 +70,7 @@
     &__img{
         flex: 1;
         width: 120px;
+        max-height: 160px;
         padding: 5px;
 
         @include for-phoneS-only{

@@ -67,8 +67,8 @@ const CardSelected = () => {
                 (<tr>
                   <td colSpan={2} className="tagsTech">
                     {Reflective && <span>Reflective</span>}
-                    {EventDriven && <span>EventDriven</span>}
-                    {OtherParadigms && <span>OtherParadigms</span>}
+                    {EventDriven && <span>Event Driven</span>}
+                    {OtherParadigms && <span>Other Paradigms</span>}
                   </td>
                 </tr>)
               }

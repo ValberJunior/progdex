@@ -2,13 +2,13 @@
 
 .bgOO{ background: linear-gradient($color2, $color2, $color8)}
 .bgfC{ background: linear-gradient($color1, $color1, $color9)}
-.bgOF{ background: linear-gradient($color3, $color3, $color10)}
+.bgOF{ background: linear-gradient($color3, $color3, $color10)} 
 .bgNo{ background: linear-gradient($color4, $color4, $color11)}
 
 .containerCard{
     @include screenSize(80vw, auto);
     margin: auto;
-    margin-top: 20px;
+    margin-top: 10vh;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
@@ -28,14 +28,7 @@
         padding:20px 60px;
 
         &-titleAndTag{
-            @include displayFlex(space-between, center,column);
-            @include for-phone-only{
-                @include displayFlex(center, flex-start,column);
-            }
-            @include for-phoneS-only{
-                @include displayFlex(center, flex-start,column);
-            }
-
+            @include displayFlex(center, flex-start,column);
             h3{
                 @include title(45px, start);
                 color: $light;
@@ -75,7 +68,7 @@
                 width: 375px;
                 max-height: 400px;
                 position: relative;
-                top: 35px;
+                top: 30px;
                 //animation pulse
                 display: inline-block;
                 vertical-align: middle;
@@ -114,11 +107,11 @@
                  }
                 @include for-phone-only{
                     top: 100px;
-                    width: 250px;
+                    width: 230px;
                 }
                 @include for-phoneS-only{
-                    top: 75px;
-                    width: 280px;
+                    top: 50px;
+                    width: 200px;
                 }
         
              }
