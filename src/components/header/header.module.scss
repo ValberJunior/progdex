@@ -11,9 +11,6 @@
 
         &-title {
             @include title(55px, start);
-            span{
-                color: $color1;
-            }
         }
 
         &-back {

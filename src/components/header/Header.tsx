@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <header className={style.container}>
       <section className={style.container__wrapper}>
-         { home ? (<h1 className={style["container__wrapper-title"]}><span>Prog</span>Dex</h1>):
+         { home ? (<h1 className={style["container__wrapper-title"]}>ProgDex</h1>):
             (<FaLongArrowAltLeft
               onClick={goHome}
               className={style["container__wrapper-back"]}
