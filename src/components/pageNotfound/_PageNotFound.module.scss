@@ -1,0 +1,19 @@
+@import "../../abstract/functions", "../../abstract/responsive", "../../abstract/variables";
+
+.container{
+    @include screenSize(100vw, 100%);
+    @include displayFlex(center, center, row);
+    padding: 200px 0px;
+    &__animation{
+        width: 45em;
+        @include for-tablet-only{
+            width: 35em;
+        }
+        @include for-phone-only{
+            width: 30em;
+        }
+        @include for-phoneS-only{
+            width: 25em;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@import "../../abstract/functions", "../../abstract/responsive", "../../abstract/variables";
+
+.container{
+    @include screenSize(100vw, 100vh);
+    @include displayFlex(center, center, row);
+    &__animation{
+        width: 450px;
+    }
+}

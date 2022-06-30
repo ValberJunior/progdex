@@ -11,6 +11,12 @@
 
         &-title {
             @include title(55px, start);
+            @include for-phone-only{
+                @include fontSize(40px);
+            }
+            @include for-phoneS-only{
+                @include fontSize(35px);
+            }
         }
 
         &-back {

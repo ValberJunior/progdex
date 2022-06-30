@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Header } from "components";
+import { Header, PageNotFound } from "components";
 import { CardSelected, Home } from "pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useThemeMode } from "state/hooks/useThemeMode";
@@ -17,7 +17,7 @@ export default function AppRouter() {
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/*" element={<h1>Page Not Found</h1>} />
+                    <Route path="/*" element={<PageNotFound/>} />
                     <Route path="/cardSelected" element={<CardSelected />} />
                 </Routes>
 
