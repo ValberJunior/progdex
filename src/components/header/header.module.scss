@@ -10,7 +10,10 @@
         padding: 90px 10px;
 
         &-title {
-            @include title(50px, start);
+            @include title(55px, start);
+            span{
+                color: $color1;
+            }
         }
 
         &-back {

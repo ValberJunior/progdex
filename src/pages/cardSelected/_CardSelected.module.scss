@@ -4,7 +4,8 @@
     @include screenSize(80vw, auto);
     margin: auto;
     background: pink;
-    border-radius: 10px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     &__desc{
         @include displayFlex(space-between, center, row);
@@ -35,11 +36,42 @@
         @include screenSize(100%, 100vh);
         @include displayFlex(space-between, center, column);
 
-        &-tech{
-            width: 400px;
-            position: relative;
-            top: 30px;
-        }
+        &-tech {
+                width: 400px;
+                position: relative;
+                top: 30px;
+                //animation pulse
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px transparent;
+        
+                -webkit-animation-name: ef-pulse-grow;
+                animation-name: ef-pulse-grow;
+                -webkit-animation-duration: 0.3s;
+                animation-duration: 0.3s;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+                -webkit-animation-direction: alternate;
+                animation-direction: alternate;
+        
+                @-webkit-keyframes ef-pulse-grow {
+                    to {
+                        -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
+                    }
+                }      
+                @keyframes ef-pulse-grow {
+                    to {
+                        -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
+                    }
+                }
+        
+             }
         &-table{
             @include screenSize(90%, 80vh);
             @include displayFlex(center,flex-start,row);
