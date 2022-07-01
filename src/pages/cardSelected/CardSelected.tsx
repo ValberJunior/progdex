@@ -72,10 +72,16 @@ const CardSelected = () => {
                   {tech?.Imperative}
                 </td>
               </tr>
-              {!ObjectOriented && !Functional && !Procedural && !Generic ? null :
+              {!ObjectOriented ? null :
                 (<tr>
                   <td colSpan={2} className="tagsTech">
-                    {ObjectOriented && <span>Object Oriented</span>}
+                   <span>Object Oriented</span>
+                  </td>
+                </tr>)
+              }
+              {!Functional && !Procedural && !Generic ? null :
+                (<tr>
+                  <td colSpan={2} className="tagsTech">
                     {Functional && <span>Functional</span>}
                     {Procedural && <span>Procedural</span>}
                     {Generic && <span>Generic</span>}
@@ -93,7 +99,7 @@ const CardSelected = () => {
               }
               {tech?.Standardized !== "" &&
                 <tr>
-                  <td colSpan={2} className="tagsTech">
+                  <td colSpan={2} className="tagsStandardized">
                     <span>{tech?.Standardized}</span>
                   </td>
                 </tr>

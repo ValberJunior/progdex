@@ -227,6 +227,18 @@
                             }
                         }
                     }
+                    .tagsStandardized{
+                        @include subtitle(18px, start);
+                        padding: 20px;
+                        @include for-phone-only{
+                            @include subtitle(16px, start);
+                            padding: 20px;
+                        }
+                        @include for-phoneS-only{
+                            @include subtitle(14px, start);
+                            padding: 20px;
+                        }
+                    }
                 }
             }
         }

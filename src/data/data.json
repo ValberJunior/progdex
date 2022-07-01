@@ -39,7 +39,7 @@
       "Reflective": "Yes[4]",
       "EventDriven": "",
       "OtherParadigms": "",
-      "Standardized": "concurrent,[5]distributed,[6]"
+      "Standardized": "concurrent, distributed"
     },
     {
       "Language": 4,
@@ -282,7 +282,7 @@
     {
       "Language": 21,
       "IntendedUse": "C",
-      "Imperative": "Application, system,[15] general purpose, low-level operations",
+      "Imperative": "Application, system, general purpose, low-level operations",
       "Picture":"/assets/techs/C.png",
       "ObjectOriented": "Yes",
       "Functional": "",
