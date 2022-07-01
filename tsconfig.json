@@ -23,6 +23,7 @@
     "plugins": [{"name": "typescript-plugin-css-modules"}]
   },
   "include": [
-    "src"
+    "src",
+    "./src/index.d.ts"
   ]
 }
