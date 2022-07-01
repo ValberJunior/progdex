@@ -34,4 +34,4 @@ https://user-images.githubusercontent.com/84424883/176827671-dcf8ca06-f6ab-422e-
 
 ### Funcionalidade do Projeto:
 <br>
-- A finalidade do projeto era por em prática o React + typescript em uma tarefa de recriar o pokedex ( projeto conhecido que se consome uma Api com pokemons e se lista todos eles na tela como em cards) dessa vez com mais de 130 linguagens de programação. Procurei fiel a idéia e me diverti bastante codando esse projeto :)
+- A finalidade do projeto era por em prática o React + typescript em uma tarefa de recriar o pokedex ( projeto conhecido que se consome uma Api de pokemons) dessa vez com mais de 130 linguagens de programação. Procurei ser fiel a idéia e me diverti bastante codando esse projeto :)
