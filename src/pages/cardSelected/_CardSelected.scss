@@ -71,7 +71,7 @@
     &__details{
         @include screenSize(100%, 100%);
         @include displayFlex(space-between, center, column);
-
+        
         &-tech {
                 width: 375px;
                 max-height: 400px;
@@ -118,7 +118,7 @@
                     width: 230px;
                 }
                 @include for-phoneS-only{
-                    top: 50px;
+                    top: 40px;
                     width: 200px;
                 }
         
@@ -147,6 +147,7 @@
                 }
                 @include for-phoneS-only{
                     @include screenSize(100%, auto);
+                    padding-top: 15px;
                 }
 
                 th{
@@ -155,6 +156,9 @@
                     @include fontSize(20px);
                     border-bottom: 2px solid $color6;
                     cursor: pointer;
+                    @include for-phoneS-only{
+                        padding: 15px;
+                    }
 
                     &:hover{
                         opacity: 0.8;
