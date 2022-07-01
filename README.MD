@@ -21,7 +21,8 @@ https://user-images.githubusercontent.com/84424883/176827671-dcf8ca06-f6ab-422e-
 - Interfaces e tipagem de dados com Typescript ✅
 - implementação do light e dark mode ✅
 <br>
-👉 👉  <h2><a href="https://progdex.netlify.app/">  SITE DEMOSTRATIVO NO AR </a></h2>
+👇👇👇👇👇👇👇👇
+<h2><a href="https://progdex.netlify.app/">  SITE DEMOSTRATIVO NO AR </a></h2>
 
 <br>
 <h2>Tecnologias utilizadas:</h2>
