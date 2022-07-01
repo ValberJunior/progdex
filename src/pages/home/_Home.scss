@@ -1,6 +1,47 @@
 @import "abstract/functions", "abstract/variables", "abstract/responsive";
 
-.container{
+.container {
     @include screenSize(100vw, auto);
-    @include displayFlex(center, center, column)
+    @include displayFlex(center, center, column);
+
+    &__top {
+        width: 60px;
+        height: 60px;
+        position: fixed;
+        left: 90%;
+        top: 80%;
+        font-size: 3rem;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        opacity: 0.5;
+        padding: 5px;
+        z-index: 99999;
+
+        &:hover {
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+        @include for-desktopL-only {
+            font-size: 2.5rem;
+            left: 95%;
+        }
+        @include for-tablet-only {
+            font-size: 2.5rem;
+            left: 90%;
+        }
+        @include for-phone-only {
+            width: 50px;
+            height: 50px;
+            font-size: 2rem;
+            left: 85%;
+        }
+        @include for-phoneS-only {
+            width: 50px;
+            height: 50px;
+            font-size: 2rem;
+            left: 85%;
+        }
+    }
 }
