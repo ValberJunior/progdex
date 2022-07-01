@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { FaLongArrowAltLeft, FaMoon, FaSun } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
@@ -16,6 +16,15 @@ const Header = () => {
   const setHome = useSetRecoilState(pageHome);
   const [darkMode, setDarkMode] = useState<boolean>(false);
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    if(theme) localStorage.setItem("ThemeMode", JSON.stringify(theme))
+  },[theme]);
+
+  useLayoutEffect(()=>{
+    const ThemeCache = localStorage.getItem("ThemeMode");
+    if(ThemeCache) setTheme(JSON.parse(ThemeCache))
+  },[setTheme])
 
   const selectThemeMode = () => {
     setTheme(theme !== themeModeEnum.darkMode ? themeModeEnum.darkMode : themeModeEnum.lightMode);
