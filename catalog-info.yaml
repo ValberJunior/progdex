@@ -1,11 +1,11 @@
 apiVersion: veecode.backstage.io/v1alpha1
-kind: Database
+kind: Cluster
 metadata:
   name: "progdex-db"
   environment:
     dns: 1.2.3.4
   annotations:
-    github.com/project-slug: ValberJunior/progdex
+    backstage.io/kubernetes-id: teste-cluster
     backstage.io/techdocs-ref: dir:.
 spec:
   type: devops
